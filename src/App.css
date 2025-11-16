@@ -1,0 +1,784 @@
+/* --- Global Resets and Body Styles --- */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* Basic body setup with a gradient background and default font */
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  min-height: 100vh;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* --- Navigation Bar Styles --- */
+.navbar {
+  /* Styling for the fixed navigation bar at the top of the page */
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  width: 97%;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 20px rgba(52, 152, 219, 0.3);
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.stuff {
+  display: flex;
+  gap: 2em;
+}
+
+/* Common styles for navigation links */
+#home {
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+}
+
+#home:hover {
+  /* Hover effect for navigation links */
+  color: #3498db;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+  transition: all 0.5s ease;
+}
+
+#signin {
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+}
+
+#signin:hover {
+  /* Hover effect for navigation links */
+  color: #3498db;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+  transition: all 0.5s ease;
+}
+
+#login {
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+}
+
+#login:hover {
+  /* Hover effect for navigation links */
+  color: #3498db;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+  transition: all 0.5s ease;
+}
+
+.hero {
+  /* Main wrapper for the application content */
+  height: 100vh;
+}
+
+#hr {
+  /* A vertical line separator used on the home page */
+  height: 100%;
+}
+
+/* --- Home Page Specific Styles --- */
+.container {
+  /* Main hero container on the home page */
+  height: 40%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(165deg, #3498db, #2980b9);
+  text-align: center; /* background: linear-gradient(165deg, #3498db, #2980b9); */
+  background-size: cover;
+  color: white;
+  box-shadow: 0 8px 32px rgba(52, 152, 219, 0.2);
+  border-radius: 15px;
+  margin: 20px;
+  backdrop-filter: blur(8px);
+  overflow-y: auto;
+  overflow: hidden;
+}
+
+.Context {
+  /* A content section on the home page */
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  margin-top: 25px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 20%;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(52, 152, 219, 0.1);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.Content-Footer {
+  /* Inner content wrapper for the .Context section */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 95%;
+  height: 100%;
+  color: white;
+}
+
+/* --- Card Styles (Used on Home and Dashboard) --- */
+.cards {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  /* Individual card styling */
+  background: linear-gradient(145deg, #3498db, #2980b9);
+  width: 25%;
+  min-width: 250px;
+  height: 90px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  box-shadow: 0 8px 32px rgba(52, 152, 219, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card:hover {
+  /* Hover effect for cards */
+  transform: translateY(-8px);
+  background: linear-gradient(145deg, #2980b9, #3498db);
+  background: rgba(52, 73, 94, 0.9);
+  box-shadow: 0 12px 40px rgba(52, 152, 219, 0.3);
+  cursor: pointer;
+}
+
+/* Specific card styles, likely for the dashboard summary */
+#card1,
+#card2,
+#card3 {
+  background: linear-gradient(145deg, #3498db, #2980b9);
+  width: 35%;
+  height: 45%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 32px rgba(52, 152, 219, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#card1:hover,
+#card2:hover,
+#card3:hover {
+  /* Hover effect for the specific dashboard cards */
+  transform: translateY(-5px);
+  background: linear-gradient(145deg, #2980b9, #3498db);
+  transform: translateY(
+    -5px
+  ); /* background: linear-gradient(145deg, #2980b9, #3498db); */
+  box-shadow: 0 12px 40px rgba(52, 152, 219, 0.3);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* --- Form Styles --- */
+/* General container for form elements */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin-top: 40px;
+  height: 70vh;
+  margin-bottom: 60px;
+  width: 75%;
+}
+
+/* Container for Account forms (Login/Register) */
+.form-containerAcc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin-top: 40px;
+  height: 70vh;
+  margin-bottom: 60px;
+}
+
+/* Container for the 404 Not Found page content */
+.NotFound-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin-top: 40px;
+  height: 70vh;
+  margin-bottom: 60px;
+}
+
+.form {
+  /* The main styling for form wrappers */
+  background: rgba(44, 62, 80, 0.8);
+  padding: 45px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(52, 152, 219, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  width: 100%;
+  max-width: 450px;
+  min-width: 200px;
+}
+
+.form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2rem;
+  color: #3498db;
+}
+
+/* Styling for groups of form inputs/labels */
+.form-group {
+  margin-bottom: 25px;
+  color: white;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: white;
+}
+
+/* General button styling for forms */
+.form-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.2s ease;
+  box-shadow: 0 8px 32px rgba(52, 152, 219, 0.2);
+}
+
+.form-button:hover {
+  background: linear-gradient(135deg, #2980b9, #3498db);
+  transform: translateY(-3px);
+}
+
+/* --- Custom Scrollbar --- */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b4e6e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* --- Helper Text in Forms --- */
+#text {
+  margin-top: 12px;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* "Forgot Password" text styling */
+#F-P {
+  margin-top: 12px;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  font-size: 18px;
+  /* color: #2980b9; */
+  transition: all 0.5s ease;
+}
+
+#F-P:hover {
+  cursor: pointer;
+  color: #3498db;
+  transition: all 0.5s ease;
+  letter-spacing: 1px;
+}
+
+/* --- Home Page Scrolling Item Sections --- */
+.TextCard {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.ItemSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.ForItems {
+  width: 80%;
+  overflow: hidden;
+  padding: 35px 0;
+}
+
+.items {
+  /* Container for the horizontally scrolling items */
+  width: max-content;
+  display: flex;
+  gap: 20px;
+  animation: scrollX 25s linear infinite;
+  transition: all 0.5s ease;
+}
+
+.items h1 {
+  min-width: 150px;
+  padding: 20px;
+  border-radius: 15px;
+  color: #f1f1f1;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.items:hover {
+  cursor: pointer;
+  animation-play-state: paused;
+  transition: all 0.5s ease;
+}
+
+/* Animation for horizontal scrolling */
+@keyframes scrollX {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Container for the vertically scrolling item sections */
+.ForItems2 {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  padding: 35px 0;
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.Items2 {
+  /* First column of vertically scrolling items */
+  width: max-content;
+  padding: 25px;
+  overflow: hidden;
+  animation: ScrollY 35s linear infinite;
+  transition: all 0.5s ease;
+}
+
+.Items2:hover {
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.Items2 h1 {
+  min-width: 150px;
+  padding: 20px;
+  border-radius: 15px;
+  color: #f1f1f1;
+  text-align: center;
+  flex-shrink: 0;
+  margin-bottom: 12px;
+}
+
+/* Animation for the first column of vertical scrolling */
+@keyframes ScrollY {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* Second column of vertically scrolling items */
+.Items3 {
+  width: max-content;
+  padding: 25px;
+  overflow: hidden;
+  animation: ScrollY2 35s linear infinite;
+  transition: all 0.5s ease;
+}
+
+.Items3:hover {
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.Items3 h1 {
+  min-width: 150px;
+  padding: 20px;
+  border-radius: 15px;
+  color: #f1f1f1;
+  text-align: center;
+  flex-shrink: 0;
+  margin-bottom: 12px;
+}
+
+/* Animation for the second column, scrolling in the opposite direction */
+@keyframes ScrollY2 {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Styling for individual text items in the scrolling sections */
+#item-text {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: 0 8px 22px rgba(52, 152, 219, 0.2);
+  backdrop-filter: blur(10px);
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
+  width: 10%;
+  height: auto;
+  transition: all 0.5s ease;
+}
+
+#item-text:hover {
+  transform: translateY(-6px);
+  background: linear-gradient(135deg, #256894, #165885);
+  transition: all 0.5s ease;
+}
+
+/* --- Footer Styles --- */
+.footer {
+  /* Styling for the page footer */
+  margin-bottom: 0;
+  min-height: auto;
+  padding: 40px 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(155deg, #2c3e50, #3498db);
+  color: white;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.footer h2 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.footer p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Fade-in animation for the footer */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Dashboard Styles --- */
+/* Main container for the dashboard content area */
+.dashboard-container {
+  padding: 20px;
+  margin-top: 40px;
+  color: white;
+  margin-bottom: 50px;
+  width: 80%;
+}
+
+/* Header section of the dashboard */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  color: #3498db;
+}
+
+/* Container for the summary cards on the dashboard */
+.dashboard-summary-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+/* Main content area for recent activity, etc. */
+.dashboard-main-content {
+  background: rgba(44, 62, 80, 0.7);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.dashboard-main-content h2 {
+  font-size: 1.8rem;
+  color: #3498db;
+  margin-bottom: 18px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.dashboard-main-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dashboard-main-content li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Profile Page Styles --- */
+/* Main container for the profile page content */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 50px;
+  color: white;
+  margin-bottom: 40px;
+  width: 75%;
+}
+
+/* The main card holding all profile information */
+.profile-card {
+  background: rgba(44, 62, 80, 0.8);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(52, 152, 219, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Header section of the profile card (avatar, name, email) */
+.profile-header {
+  margin-bottom: 30px;
+}
+
+/* User's avatar image */
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #3498db;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.profile-header h2 {
+  font-size: 2.2rem;
+  color: #3498db;
+  margin: 0;
+}
+
+.profile-header p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* "About Me" section */
+.profile-details {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.profile-details h3 {
+  font-size: 1.5rem;
+  color: #3498db;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+/* Container for action buttons like 'Edit Profile', 'Logout' */
+.profile-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Specific styling for "danger" actions like logout or delete */
+.danger-button {
+  border-radius: 30px;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.danger-button:hover {
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+}
+
+/* --- Dashboard Sidebar Navigation --- */
+.Nav {
+  /* Collapsed state of the sidebar */
+  margin-top: 45px;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  width: 50px;
+  overflow: hidden;
+  height: 80vh;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 32px rgba(52, 152, 219, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s linear;
+  border-radius: 10px 10px;
+}
+
+.Nav:hover {
+  /* Expanded state of the sidebar on hover */
+  width: 250px;
+  transition: all 0.3s linear;
+}
+
+.Dash-text {
+  /* Flex container for icon and text in the sidebar */
+  display: flex;
+  gap: 5px;
+}
+
+.Dash-text h2 {
+  margin-top: 15px;
+}
+
+/* Main container that holds both the sidebar and the page content */
+.NContanin {
+  display: flex;
+  gap: 135px;
+}
+
+/* Container for the Reset Password form */
+.resetpass-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin-top: 40px;
+  height: 70vh;
+  margin-bottom: 60px;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media screen and (max-width: 768px) {
+  /* Styles for screens 768px wide or smaller */
+  * {
+    font-size: medium;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+  #hr {
+    display: none;
+  }
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .card {
+    width: 90%;
+    height: 70px;
+  }
+  .hero {
+    height: auto;
+  }
+  .container {
+    margin-top: 42px;
+  }
+  .form-container {
+    height: 100vh;
+  }
+  .footer {
+    padding: 30px 10px;
+  }
+  .footer h2 {
+    font-size: 1.4rem;
+  }
+  .NContanin {
+    gap: 20px;
+  }
+  .ForItems2 {
+    height: 350px;
+    padding: 0;
+  }
+}
