@@ -386,9 +386,6 @@ For questions or issues:
 ```
 
 ---
-## **📝 اختار الاسم والوصف:**
-
-**توصيتي:**
 
 **Name:** `react-frontend-client`
 
